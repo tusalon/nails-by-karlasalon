@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Nail's YEY93
+// CLIENTE: Nails By Karla Salón
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = 'affa3b9a-8a2c-4e82-a251-1cdcaaf2de75'; // ID de Nail's YEY93
+const NEGOCIO_ID_POR_DEFECTO = 'fe2274ac-aac0-4ded-9e7f-72d8e2ddfd50'; // ID de Nails By Karla Salón
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Nail\'s YEY93';
+    return config?.nombre || 'Nails By Karla Salón';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '63923027';
+    return config?.telefono || '56381876';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'adrianga971202@gmail.com';
+    return config?.email || 'martinezvaldeskarla@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Nail\'s YEY93!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Nails By Karla Salón!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'nails-yey93';
+    return config?.ntfy_topic || 'nails-by-karla-salon';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Nail\'s YEY93');
+console.log('✅ config-negocio.js listo para Nails By Karla Salón');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
