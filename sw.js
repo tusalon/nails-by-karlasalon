@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Nail's YEY93
+// sw.js - Service Worker para Nails By Karla Salón
 
-const CACHE_NAME = 'nails-yey93-v1';
+const CACHE_NAME = 'nails-by-karla-salon-v1';
 const urlsToCache = [
-  '/nailsyey/',
-  '/nailsyey/index.html',
-  '/nailsyey/admin.html',
-  '/nailsyey/admin-login.html',
-  '/nailsyey/setup-wizard.html',
-  '/nailsyey/editar-negocio.html',
-  '/nailsyey/manifest.json',
-  '/nailsyey/icons/icon-72x72.png',
-  '/nailsyey/icons/icon-96x96.png',
-  '/nailsyey/icons/icon-128x128.png',
-  '/nailsyey/icons/icon-144x144.png',
-  '/nailsyey/icons/icon-152x152.png',
-  '/nailsyey/icons/icon-192x192.png',
-  '/nailsyey/icons/icon-384x384.png',
-  '/nailsyey/icons/icon-512x512.png'
+  '/nails-by-karlasalon/',
+  '/nails-by-karlasalon/index.html',
+  '/nails-by-karlasalon/admin.html',
+  '/nails-by-karlasalon/admin-login.html',
+  '/nails-by-karlasalon/setup-wizard.html',
+  '/nails-by-karlasalon/editar-negocio.html',
+  '/nails-by-karlasalon/manifest.json',
+  '/nails-by-karlasalon/icons/icon-72x72.png',
+  '/nails-by-karlasalon/icons/icon-96x96.png',
+  '/nails-by-karlasalon/icons/icon-128x128.png',
+  '/nails-by-karlasalon/icons/icon-144x144.png',
+  '/nails-by-karlasalon/icons/icon-152x152.png',
+  '/nails-by-karlasalon/icons/icon-192x192.png',
+  '/nails-by-karlasalon/icons/icon-384x384.png',
+  '/nails-by-karlasalon/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/nailsyey/icons/icon-192x192.png');
+            return caches.match('/nails-by-karlasalon/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Nail\'s YEY93');
+console.log('✅ Service Worker configurado para Nails By Karla Salón');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
